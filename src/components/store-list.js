@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Pagination from "react-js-pagination";
-import callApi from "./callApi";
+import callApi from "./services";
 
 class StoreList extends Component {
   constructor(props) {

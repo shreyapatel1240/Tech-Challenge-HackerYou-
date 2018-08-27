@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import callApi from "./callApi";
+import callApi from "./services";
 import Pagination from "react-js-pagination";
 import noImage from "../images/No_image.png";
 //import ProductsListItem from "./product-list-item";

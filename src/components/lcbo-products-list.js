@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ProductsListItem from "./product-list-item";
 import ProductDetails from "./product-details";
 import Pagination from "react-js-pagination";
-import callApi from "./callApi";
+import callApi from "./services";
 
 class LcboProductsList extends Component {
   constructor(props) {
