@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import callApi from "./services";
 import Pagination from "react-js-pagination";
-import noImage from "../images/No_image.png";
-//import ProductsListItem from "./product-list-item";
+import ProductsListItem from "./product-list-item";
 
 class ProductsList extends Component {
   constructor(props) {
@@ -42,21 +41,7 @@ class ProductsList extends Component {
     if (!this.state.products) return;
 
     return this.state.products.map(product => {
-      //return <ProductsListItem key={product.id} product={product} />;
-      let img_src;
-      if (product.image_thumb_url) {
-        img_src = product.image_thumb_url;
-      } else {
-        img_src = noImage;
-      }
-      return (
-        <div key={product.id} className="column">
-          <img src={img_src} alt={product.name} />
-          {product.name}
-          <br />
-          {product.package}
-        </div>
-      );
+      return <ProductsListItem key={product.id} product={product} />;
     });
   }
 

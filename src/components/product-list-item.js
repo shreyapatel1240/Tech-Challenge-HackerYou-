@@ -10,7 +10,9 @@ const ProductListItem = ({ product, onProductSelect }) => {
   }
   return (
     <div
-      onClick={() => onProductSelect(product)}
+      onClick={() => {
+        if (onProductSelect) onProductSelect(product);
+      }}
       key={product.id}
       className="column"
     >
