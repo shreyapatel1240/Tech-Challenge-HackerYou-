@@ -1,7 +1,3 @@
-body {
-  font-family: "open sans";
-}
-
 .App {
   text-align: center;
 }
@@ -19,6 +15,7 @@ body {
   float: left;
   width: 17.33%;
   padding: 5px;
+  cursor: pointer;
 }
 
 .row::after {

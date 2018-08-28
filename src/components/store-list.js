@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Pagination from "react-js-pagination";
 import callApi from "./services";
+import StoreListItem from "./store-list-items";
+import Map from "./map";
 
 class StoreList extends Component {
   constructor(props) {
@@ -9,7 +11,8 @@ class StoreList extends Component {
       stores: [],
       pages: [],
       activePage: 1,
-      product_id: this.props.product.id
+      product_id: this.props.product.id,
+      selectedStore: null
     };
     this.handlePagination = this.handlePagination.bind(this);
   }
@@ -35,14 +38,28 @@ class StoreList extends Component {
   renderStores() {
     if (!this.state.stores) return;
     return this.state.stores.map(store => {
-      return <div key={store.id}>{store.name}</div>;
+      return (
+        <StoreListItem
+          key={store.id}
+          onStoreSelect={selectedStore => this.setState({ selectedStore })}
+          store={store}
+        />
+      );
     });
+  }
+
+  renderMap() {
+    if (!this.state.selectedStore) return;
+    return (
+      <Map key={this.state.selectedStore.id} store={this.state.selectedStore} />
+    );
   }
 
   render() {
     return (
       <div>
         <div className="row">{this.renderStores()}</div>
+        {this.renderMap()}
         <div>
           <Pagination
             activePage={this.state.activePage}
