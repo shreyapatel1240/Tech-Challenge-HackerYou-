@@ -9,7 +9,7 @@ const StoreListItem = ({ store, onStoreSelect }) => {
         onStoreSelect(store);
       }}
       key={store.id}
-      className="column"
+      className="store-list-item"
       id={id}
     >
       {store.name}

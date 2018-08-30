@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProductsListItem from "./product-list-item";
-import ProductDetails from "./product-details";
+//import ProductDetails from "./product-details";
 import Pagination from "react-js-pagination";
 import callApi from "./services";
 
@@ -27,7 +27,8 @@ class LcboProductsList extends Component {
       "get",
       "products",
       "q=beer&where_not=is_dead,is_discontinued",
-      pageNumber
+      pageNumber,
+      10
     )
       .then(response => {
         this.setState({
@@ -58,7 +59,7 @@ class LcboProductsList extends Component {
   render() {
     return (
       <div>
-        <div className="row">{this.renderProducts()}</div>
+        <div className="product-list">{this.renderProducts()}</div>
         <div>
           <Pagination
             activePage={this.state.activePage}
@@ -68,10 +69,9 @@ class LcboProductsList extends Component {
             onChange={this.handlePagination}
           />
         </div>
-        <div>
-          {/* Display product details on product click */}
+        {/*<div>
           <ProductDetails product={this.state.selectedProduct} />
-        </div>
+        </div>*/}
       </div>
     );
   }

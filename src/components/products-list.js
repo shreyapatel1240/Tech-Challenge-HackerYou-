@@ -24,7 +24,8 @@ class ProductsList extends Component {
       "get",
       "products",
       "where=is_seasonal&where_not=is_dead,is_discontinued",
-      pageNumber
+      pageNumber,
+      10
     )
       .then(response => {
         this.setState({
@@ -48,17 +49,15 @@ class ProductsList extends Component {
   render() {
     return (
       <div>
-        <div className="row">{this.renderProducts()}</div>
-        <div>
-          {/* Pagination */}
-          <Pagination
-            activePage={this.state.activePage}
-            itemsCountPerPage={this.state.pages.records_per_page}
-            totalItemsCount={this.state.pages.total_record_count}
-            pageRangeDisplayed={5}
-            onChange={this.handlePagination}
-          />
-        </div>
+        <div className="product-list">{this.renderProducts()}</div>
+        {/* Pagination */}
+        <Pagination
+          activePage={this.state.activePage}
+          itemsCountPerPage={this.state.pages.records_per_page}
+          totalItemsCount={this.state.pages.total_record_count}
+          pageRangeDisplayed={5}
+          onChange={this.handlePagination}
+        />
       </div>
     );
   }

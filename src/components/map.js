@@ -64,19 +64,11 @@ export default class Map extends Component {
   }
 
   render() {
-    const divStyle = {
-      height: "100%",
-      width: "100%"
-    };
     const mapStyle = {
       minHeight: "280px",
-      width: "100%"
+      width: "90%"
     };
 
-    return (
-      <div style={divStyle}>
-        <div id="map" style={mapStyle} />
-      </div>
-    );
+    return <div id="map" style={mapStyle} />;
   }
 }

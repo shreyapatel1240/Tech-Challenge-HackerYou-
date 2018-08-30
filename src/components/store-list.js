@@ -18,9 +18,16 @@ class StoreList extends Component {
   }
 
   handlePagination(pageNumber) {
+    if (!this.state.product_id) return;
     if (!pageNumber) pageNumber = 1;
 
-    callApi("get", "stores", `product_id=${this.state.product_id}`, pageNumber)
+    callApi(
+      "get",
+      "stores",
+      `product_id=${this.state.product_id}`,
+      pageNumber,
+      7
+    )
       .then(response => {
         this.setState({
           stores: response.data.result,
@@ -58,16 +65,22 @@ class StoreList extends Component {
   render() {
     return (
       <div>
-        <div className="row">{this.renderStores()}</div>
-        {this.renderMap()}
-        <div>
-          <Pagination
-            activePage={this.state.activePage}
-            itemsCountPerPage={this.state.pages.records_per_page}
-            totalItemsCount={this.state.pages.total_record_count}
-            pageRangeDisplayed={5}
-            onChange={this.handlePagination}
-          />
+        <div className="store-map">
+          <div className="left-section">
+            <h3>In-Store</h3>
+            {this.renderStores()}
+            <Pagination
+              activePage={this.state.activePage}
+              itemsCountPerPage={this.state.pages.records_per_page}
+              totalItemsCount={this.state.pages.total_record_count}
+              pageRangeDisplayed={5}
+              onChange={this.handlePagination}
+            />
+          </div>
+          <div className="right-section">
+            <h3>Select a store from the left panel to get direction.</h3>
+            {this.renderMap()}
+          </div>
         </div>
       </div>
     );
