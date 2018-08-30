@@ -1,0 +1,30 @@
+/* navigation bar */
+nav {
+  overflow: hidden;
+  background-color: #383163;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  margin-right: 5%;
+  margin-top: 1%;
+  float: right;
+}
+
+nav ul li a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 14px 2px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+nav img {
+  margin-left: 20px;
+}

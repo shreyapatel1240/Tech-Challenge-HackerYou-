@@ -4,6 +4,7 @@ import Home from "./home";
 import ProductsList from "./products-list";
 import LcboProductsList from "./lcbo-products-list";
 import ProductDetails from "./product-details";
+import "../Product.css";
 
 const Main = () => {
   return (

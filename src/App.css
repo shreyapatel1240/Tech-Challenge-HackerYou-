@@ -15,37 +15,6 @@
   text-align: center;
 }
 
-/* navigation bar */
-nav {
-  overflow: hidden;
-  background-color: #383163;
-  position: fixed;
-  top: 0%;
-  width: 100%;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  margin-right: 5%;
-  margin-top: 1%;
-  float: right;
-}
-
-nav ul li a {
-  float: left;
-  display: block;
-  color: white;
-  padding: 14px 2px;
-  text-decoration: none;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-nav img {
-  margin-left: 20px;
-}
-
 /* Home Page */
 .home {
   margin: 20px;
@@ -57,82 +26,6 @@ main {
 
 ul li {
   display: inline-block;
-}
-
-/* Pagination */
-ul.pagination {
-  text-align: center;
-}
-
-.pagination li a {
-  color: #383163;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.pagination li.active {
-  background-color: #383163;
-}
-
-.pagination li.active a {
-  color: white;
-}
-
-.pagination li a:hover:not(.active) {
-  background-color: #383163;
-  color: white;
-}
-
-/* product list */
-.product-list {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.product-list-item {
-  padding: 1px;
-  flex: 1 1 16%;
-  align-items: center;
-  margin: 5px;
-  text-align: center;
-  border: 1px solid #383163;
-  border-radius: 4px;
-  cursor: pointer;
-  justify-content: center;
-}
-
-.product-list-item:hover {
-  background-color: #efeef5;
-}
-
-.price {
-  color: red;
-  font-weight: 700;
-}
-
-.product-list-item a {
-  text-decoration: none;
-  color: black;
-}
-
-.product-list-item img {
-  display: block;
-  padding-top: 5px;
-  margin: 0px auto;
-}
-
-.no-image {
-  min-height: 320px;
-  width: 100%;
 }
 
 /* Product Detail */
@@ -156,19 +49,4 @@ ul.pagination {
   clear: both;
   margin-top: 10px;
   border-top: 1px solid black;
-}
-
-/* store list */
-.store-list-item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.store-list-item:hover {
-  color: white;
-  background-color: #383163;
-}
-
-.store-map {
-  margin-left: 30px;
 }

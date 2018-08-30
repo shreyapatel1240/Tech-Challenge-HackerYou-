@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import callApi from "./services";
 import StoreList from "./store-list";
 import noImage from "../images/No_image.png";
+import "../Store.css";
 
 class ProductDetails extends Component {
   constructor(props) {

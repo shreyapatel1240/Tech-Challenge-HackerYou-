@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/header";
-import Main from "./components/main";
+import Navigation from "./components/navigation";
+import MainContainer from "./components/main-container";
 import variables from "./variables.json";
+import "./Pagination.css";
 
 class App extends Component {
   componentDidMount() {
@@ -16,8 +17,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Main />
+        <Navigation />
+        <MainContainer />
       </div>
     );
   }

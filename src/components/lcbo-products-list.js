@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProductsListItem from "./product-list-item";
-//import ProductDetails from "./product-details";
 import Pagination from "react-js-pagination";
 import callApi from "./services";
 
